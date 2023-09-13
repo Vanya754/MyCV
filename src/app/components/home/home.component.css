@@ -1,0 +1,60 @@
+
+.home__container {
+  padding-top: 7.5rem;
+  text-align: center;
+  row-gap: 0;
+}
+
+.home__name,
+.home__profession {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 2px;
+}
+
+.home__name {
+  margin-bottom: .25rem;
+}
+
+.home__blob {
+  position: relative;
+  justify-self: center;
+}
+
+.home__perfil {
+  width: 180px;
+  height: 320px;
+  background: linear-gradient(132deg,
+  hsl(45, 6%, 70%) 25%,
+  hsl(30, 12%, 50%) 105%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.home__img {
+  width: 205px;
+  transform: translateY(1px);
+}
+
+.home__star-1,
+.home__star-2 {
+  position: absolute;
+  width: 50px;
+  fill: var(--title-color);
+}
+
+.home__star-1 {
+  top: 2.5rem;
+  left: -4rem;
+}
+
+.home__star-2 {
+  right: -4rem;
+  bottom: .75rem;
+}
+
+.home__profession {
+  transform: translateY(1rem);
+}
