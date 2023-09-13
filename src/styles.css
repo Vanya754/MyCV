@@ -143,10 +143,40 @@ img {
 
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(40, 16%, 75%);
+}
 
+::-webkit-scrollbar-thumb {
+  border-radius: .5rem;
+  background-color: hsl(40, 16%, 55%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(40, 16%, 35%);
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: 10%;
+  background-color: var(--container-color);
+  box-shadow: 0 4px 16px hsla(40, 48%, 4%, .15);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  border-radius: .25rem;
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s;
+}
 
+.scrollup:hover {
+  transform: translateY(-.25rem);
+}
 
 /* Show Scroll Up */
 

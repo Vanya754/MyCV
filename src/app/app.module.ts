@@ -9,9 +9,10 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ScrollUpComponent } from './components/scroll-up/scroll-up.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, EducationComponent, ProjectsComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, EducationComponent, ProjectsComponent, FooterComponent, ScrollUpComponent],
   imports: [BrowserModule, RouterOutlet],
   providers: [],
   bootstrap: [AppComponent],
