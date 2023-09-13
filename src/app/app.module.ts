@@ -7,9 +7,10 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, EducationComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, EducationComponent, ProjectsComponent],
   imports: [BrowserModule, RouterOutlet],
   providers: [],
   bootstrap: [AppComponent],
