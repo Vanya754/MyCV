@@ -27,3 +27,15 @@
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
 }
+
+.ri-github-fill {
+  font-size: 1.5rem;
+}
+
+.ri-instagram-line {
+  font-size: 1.5rem;
+}
+
+.ri-telegram-line {
+  font-size: 1.5rem;
+}
