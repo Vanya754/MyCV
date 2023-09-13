@@ -33,7 +33,7 @@
 /*========== Responsive typography ==========*/
 @media screen and (min-width: 1024px) {
   :root {
-    --biggest-font-size: 3.75rem;
+    --biggest-font-size: 2.25rem;
     --normal-font-size: 1rem;
     --small-font-size: .938rem;
   }
@@ -78,18 +78,42 @@ img {
   height: auto;
 }
 
+.resume__title {
+  font-size: var(--normal-font-size);
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: .25rem;
+}
+
+.resume__title i {
+  font-size: 1.5rem;
+}
+
+.resume__data {
+  display: grid;
+  row-gap: .5rem;
+  padding-left: 1.5rem;
+  font-size: var(--small-font-size);
+}
+
+.resume__button-link {
+  width: max-content;
+  color: var(--text-color);
+  display: inline-flex;
+  column-gap: .25rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.resume__button-link:hover {
+  text-decoration: underline;
+}
+
 /*=============== THEME ===============*/
-
-
 /*========== Variables Dark theme ==========*/
-
-
 /*==========
-	Color changes in some parts of
-	the website, in dark theme
+  Color changes in some parts of
+  the website, in dark theme
 ==========*/
-
-
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1500px;
@@ -116,13 +140,6 @@ img {
 
 
 /* Active link */
-
-
-/*=============== SKILLS ===============*/
-
-
-/*=============== EDUCATION ===============*/
-/* To add code or make changes to the section */
 
 
 /*=============== WORK ===============*/

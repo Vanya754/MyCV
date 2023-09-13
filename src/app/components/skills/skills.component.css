@@ -17,13 +17,4 @@
   margin: 0;
 }
 
-.resume__title {
-  font-size: var(--normal-font-size);
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: .25rem;
-}
 
-resume__title i {
-  font-size: 1.5rem;
-}
