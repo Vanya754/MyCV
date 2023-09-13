@@ -1,4 +1,4 @@
-/*=============== HEADER & NAV ===============*/
+
 .header {
   position: fixed;
   width: 100%;
@@ -19,9 +19,10 @@
 .nav__logo {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+  font-size: 2rem;
 }
 
-/* Navigation for mobile devices */
+
 @media screen  and (max-width: 1023px) {
   .nav__menu {
     position: fixed;
@@ -43,7 +44,7 @@
 
 .nav__link {
   position: relative;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--title-color);
 }
 
@@ -63,3 +64,5 @@
   opacity: 1;
   transform: translateY(-4px);
 }
+
+

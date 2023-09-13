@@ -92,7 +92,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1024px;
+  max-width: 1500px;
   margin-inline: 1.5rem;
 }
 
@@ -118,9 +118,6 @@ img {
 
 
 /* Active link */
-
-
-/*=============== HOME ===============*/
 
 
 /*=============== ABOUT ===============*/
