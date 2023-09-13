@@ -27,3 +27,36 @@
 .footer__link:hover {
   text-decoration: underline;
 }
+
+.ri-phone-line,
+.ri-mail-line,
+.ri-link {
+  font-size: 1.25rem;
+}
+
+
+@media screen  and (max-width: 350px) {
+  .footer__container {
+    grid-template-columns: max-content;
+    row-gap: 1.5rem;
+  }
+}
+
+@media screen  and (min-width: 576px) {
+  .footer__container {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media screen  and (min-width: 768px) {
+  .footer {
+    padding-block: 2.5rem 2rem;
+  }
+}
+
+@media screen  and (min-width: 1024px) {
+  .footer__container {
+    margin-inline: 1.5rem;
+    padding-top: 2rem;
+  }
+}

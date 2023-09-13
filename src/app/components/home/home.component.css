@@ -43,6 +43,7 @@
   position: absolute;
   width: 50px;
   fill: var(--title-color);
+  transition: fill .4s;
 }
 
 .home__star-1 {
@@ -57,4 +58,38 @@
 
 .home__profession {
   transform: translateY(1rem);
+}
+
+@media screen  and (min-width: 768px) {
+  .home {
+    grid-column: 1/3;
+  }
+
+  .home__container {
+    padding-top: 3rem;
+  }
+}
+
+@media screen  and (min-width: 1024px) {
+  .home__name {
+    margin-bottom: .5rem;
+  }
+
+  .home__star-1,
+  .home__star-2 {
+    width: 60px;
+  }
+
+  .home__star-1 {
+    left: -5rem;
+  }
+
+  .home__star-2 {
+    right: -5rem;
+    bottom: 2rem;
+  }
+
+  .home__profession {
+    transform: translateY(2rem);
+  }
 }

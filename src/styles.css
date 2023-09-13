@@ -109,11 +109,45 @@ img {
 }
 
 /*=============== THEME ===============*/
+.change-theme {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+
+}
+
 /*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --title-color: hsl(40, 48%, 90%);
+  --text-color: hsl(40, 12%, 70%);
+  --body-color: hsl(40, 12%, 16%);
+  --container-color: hsl(40, 20%, 8%);
+}
+
 /*==========
   Color changes in some parts of
   the website, in dark theme
 ==========*/
+.dark-theme :is(.nav__menu, .scrollup) {
+  background-color: hsl(40, 20%, 12%);
+}
+
+.dark-theme .home__profession {
+  text-shadow: 0 0 6px hsl(40, 20%, 12%);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(40, 16%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(40, 16%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(40, 16%, 35%);
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1500px;
@@ -171,7 +205,7 @@ img {
   color: var(--title-color);
   border-radius: .25rem;
   z-index: var(--z-tooltip);
-  transition: bottom .4s, transform .4s;
+  transition: bottom .4s, transform .4s, background .4s;
 }
 
 .scrollup:hover {
@@ -179,14 +213,87 @@ img {
 }
 
 /* Show Scroll Up */
-
+.show-scroll {
+  bottom: 7rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen  and (max-width: 350px) {
+  .container {
+    margin-inline: 1rem;
+  }
 
+  .nav__menu {
+    padding-inline: 2rem;
+  }
+
+  .home__star-1 {
+    left: 0;
+  }
+
+  .home__star-2 {
+    right: -.5rem;
+  }
+
+  .skills__content {
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+
+  }
+}
 
 /* For medium devices */
+@media screen  and (min-width: 576px) {
+  .nav__menu {
+    margin-inline: auto;
+  }
 
+  .show-scroll {
+    bottom: 3rem;
+  }
+}
+
+@media screen  and (min-width: 768px) {
+  .section {
+    padding-top: 2.5rem;
+
+  }
+
+  .section__title {
+    margin: 0 0 2rem;
+  }
+
+  .resume__main {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .resume__left,
+  .resume__right {
+    padding-inline: 1.5rem;
+  }
+}
 
 /* For large devices */
+@media screen  and (min-width: 1024px) {
+  body {
+    background-color: var(--body-color);
+    margin-block: 3rem;
+  }
 
+  .resume {
+    background-color: var(--container-color);
+    box-shadow: 0 0 48px hsla(40, 48%, 12%, .2);
+    margin-inline: 4rem;
+    transition: background .4s;
+  }
+
+  .resume__main {
+    grid-template-columns: 376px 1fr;
+  }
+
+  .dark-theme .resume {
+    box-shadow: 0 0 48px hsla(40, 48%, 4%, .4);
+  }
+}
