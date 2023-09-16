@@ -151,7 +151,7 @@ body.dark-theme {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1500px;
-  margin-inline: 1.5rem;
+  /*margin-inline: 1.5rem;*/
 }
 
 .grid {
@@ -174,7 +174,10 @@ body.dark-theme {
 
 
 /* Active link */
-
+.active-link::after {
+  opacity: 1;
+  transform: translateY(-4px);
+}
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
@@ -257,7 +260,6 @@ body.dark-theme {
 @media screen  and (min-width: 768px) {
   .section {
     padding-top: 2.5rem;
-
   }
 
   .section__title {
@@ -272,6 +274,7 @@ body.dark-theme {
   .resume__left,
   .resume__right {
     padding-inline: 1.5rem;
+
   }
 }
 
@@ -279,13 +282,13 @@ body.dark-theme {
 @media screen  and (min-width: 1024px) {
   body {
     background-color: var(--body-color);
-    margin-block: 3rem;
+    /*margin-block: 3rem;*/
   }
 
   .resume {
     background-color: var(--container-color);
     box-shadow: 0 0 48px hsla(40, 48%, 12%, .2);
-    margin-inline: 4rem;
+    /*margin-inline: 4rem;*/
     transition: background .4s;
   }
 
