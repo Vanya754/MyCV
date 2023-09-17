@@ -1,6 +1,7 @@
 .skills__content,
 .skills__list {
   display: grid;
+  margin: 10px;
 }
 
 .skills__content {
@@ -16,5 +17,7 @@
 .skills__list li {
   margin: 0;
 }
+
+
 
 

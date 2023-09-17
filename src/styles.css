@@ -33,7 +33,7 @@
 /*========== Responsive typography ==========*/
 @media screen and (min-width: 1024px) {
   :root {
-    --biggest-font-size: 2.25rem;
+    --biggest-font-size: 2rem;
     --normal-font-size: 1rem;
     --small-font-size: .938rem;
   }
@@ -44,6 +44,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -57,6 +58,7 @@ body {
   background-color: var(--container-color);
   color: var(--text-color);
   transition: background .4s;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
@@ -116,6 +118,7 @@ img {
 
 }
 
+
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
   --title-color: hsl(40, 48%, 90%);
@@ -172,13 +175,6 @@ body.dark-theme {
   padding-bottom: .75rem;
 }
 
-
-/* Active link */
-.active-link::after {
-  opacity: 1;
-  transform: translateY(-4px);
-}
-
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
@@ -213,6 +209,7 @@ body.dark-theme {
 
 .scrollup:hover {
   transform: translateY(-.25rem);
+
 }
 
 /* Show Scroll Up */

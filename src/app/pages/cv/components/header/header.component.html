@@ -4,34 +4,40 @@
     <div class="nav__menu">
       <ul class="nav__list">
         <li class="nav__item">
-          <a [class.active-link]="activeSectionId === 'home'" class="nav__link active-link" href="#home">
-            <i class="ri-home-2-line"></i>
+          <a [class.active-link]="activeSectionId === 'home'" class="nav__link"
+             href="#home">
+            <i class="ri-home-2-line"><span>Home</span></i>
           </a>
         </li>
         <li class="nav__item">
-          <a [class.active-link]="activeSectionId === 'about'" class="nav__link active-link" href="#about">
-            <i class="ri-user-line"></i>
+          <a [class.active-link]="activeSectionId === 'about'" class="nav__link"
+             href="#about">
+            <i class="ri-user-line"><span>About</span></i>
           </a>
         </li>
         <li class="nav__item">
-          <a [class.active-link]="activeSectionId === 'skills'" class="nav__link active-link" href="#skills">
-            <i class="ri-file-list-fill"></i>
+          <a [class.active-link]="activeSectionId === 'skills'" class="nav__link"
+             href="#skills">
+            <i class="ri-file-list-fill"><span>Skills</span></i>
           </a>
         </li>
         <li class="nav__item">
-          <a [class.active-link]="activeSectionId === 'education'" class="nav__link active-link" href="#education">
-            <i class="ri-book-line"></i>
+          <a [class.active-link]="activeSectionId === 'education'"
+             class="nav__link"
+             href="#education">
+            <i class="ri-book-line"><span>Education</span></i>
           </a>
         </li>
         <li class="nav__item">
-          <a [class.active-link]="activeSectionId === 'projects'" class="nav__link active-link" href="#projects">
-            <i class="ri-briefcase-line"></i>
+          <a [class.active-link]="activeSectionId === 'projects'"
+             class="nav__link"
+             href="#projects">
+            <i class="ri-briefcase-line"><span>Projects</span></i>
           </a>
         </li>
       </ul>
     </div>
     <app-theme-switcher></app-theme-switcher>
   </nav>
-
 </header>
 

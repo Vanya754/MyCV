@@ -1,10 +1,5 @@
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { SharedDataService } from '../../services/shared-data.service';
 
 @Component({
   selector: 'app-header',
@@ -12,34 +7,31 @@ import {
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  sections: ElementRef[] = [];
   activeSectionId: string | null = null;
-  @ViewChild('home') homeSection!: ElementRef;
-  @ViewChild('about') aboutSection!: ElementRef;
-  @ViewChild('skills') skillsSection!: ElementRef;
-  @ViewChild('education') educationSection!: ElementRef;
-  @ViewChild('projects') projectsSection!: ElementRef;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private sharedDataService: SharedDataService) {
+    this.sharedDataService.activeSectionId$.subscribe((sectionId) => {
+      this.activeSectionId = sectionId;
+    });
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollDown = window.scrollY;
-    const sectionElements = [
-      this.homeSection,
-      this.aboutSection,
-      this.skillsSection,
-      this.educationSection,
-      this.projectsSection,
-    ];
+    const sectionElements = document.querySelectorAll('section[id]');
 
-    sectionElements.forEach((section) => {
-      const sectionHeight = section.nativeElement.offsetHeight;
-      const sectionTop = section.nativeElement.offsetTop - 58;
-      const sectionId = section.nativeElement.getAttribute('id');
+    sectionElements.forEach((element: Element) => {
+      if (element instanceof HTMLElement) {
+        const sectionHeight = element.offsetHeight;
+        const sectionTop = element.offsetTop - 58;
+        const sectionId = element.getAttribute('id');
 
-      if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-        this.activeSectionId = sectionId;
+        if (
+          scrollDown > sectionTop &&
+          scrollDown <= sectionTop + sectionHeight
+        ) {
+          this.sharedDataService.setActiveSectionId(sectionId);
+        }
       }
     });
   }
