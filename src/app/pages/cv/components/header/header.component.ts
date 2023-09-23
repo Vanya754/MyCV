@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { SharedDataService } from '../cv/services/shared-data.service';
+import { SharedDataService } from '../../services/shared-data.service';
 
 @Component({
   selector: 'app-header',
