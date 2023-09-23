@@ -37,6 +37,8 @@
     --normal-font-size: 1rem;
     --small-font-size: .938rem;
   }
+
+
 }
 
 /*=============== BASE ===============*/
@@ -90,6 +92,19 @@ img {
 .resume__title i {
   font-size: 1.5rem;
 }
+
+.ri-arrow-left-circle-fill {
+  font-size: 1.8rem;
+}
+
+.ri-arrow-left-circle-fill:hover {
+  opacity: 70%;
+}
+
+.ri-arrow-left-circle-fill:active {
+  opacity: 50%;
+}
+
 
 .resume__data {
   display: grid;
@@ -167,7 +182,7 @@ body.dark-theme {
 }
 
 .section__title {
-  width: max-content;
+  width: 100%;
   margin: 0 auto 2.5rem;
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
@@ -220,6 +235,11 @@ body.dark-theme {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen  and (max-width: 350px) {
+  .skills__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .container {
     margin-inline: 1rem;
   }
@@ -243,8 +263,23 @@ body.dark-theme {
   }
 }
 
+@media screen  and (min-width: 350px) {
+  .skills__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+}
+
+
 /* For medium devices */
 @media screen  and (min-width: 576px) {
+  .skills__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .nav__menu {
     margin-inline: auto;
   }
@@ -255,6 +290,11 @@ body.dark-theme {
 }
 
 @media screen  and (min-width: 768px) {
+  .skills__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .section {
     padding-top: 2.5rem;
   }
@@ -265,13 +305,18 @@ body.dark-theme {
 
   .resume__main {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+  }
+
+  .resume__right {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
   }
 
   .resume__left,
   .resume__right {
     padding-inline: 1.5rem;
-
   }
 }
 
@@ -295,5 +340,10 @@ body.dark-theme {
 
   .dark-theme .resume {
     box-shadow: 0 0 48px hsla(40, 48%, 4%, .4);
+  }
+
+  .skills__container {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

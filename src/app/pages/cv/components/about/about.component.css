@@ -1,3 +1,4 @@
+
 .about__button {
   width: max-content;
   color: var(--title-color);
@@ -31,6 +32,7 @@
 
 .ri-github-fill {
   font-size: 1.5rem;
+  color: var(--title-color);
 }
 
 .ri-instagram-line {
@@ -39,4 +41,10 @@
 
 .ri-telegram-line {
   font-size: 1.5rem;
+}
+
+.about__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

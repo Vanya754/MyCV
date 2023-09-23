@@ -1,3 +1,8 @@
+.skills__container {
+  display: flex;
+}
+
+
 .skills__content,
 .skills__list {
   display: grid;
@@ -7,6 +12,7 @@
 .skills__content {
   grid-template-columns: repeat(2, max-content);
   align-items: baseline;
+  justify-content: space-around;
   column-gap: 3rem;
 }
 
