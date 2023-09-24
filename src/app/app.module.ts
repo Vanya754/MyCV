@@ -20,6 +20,8 @@ import { ScrollUpComponent } from './pages/cv/components/scroll-up/scroll-up.com
 import { SkillsComponent } from './pages/cv/components/skills/skills.component';
 import { ThemeSwitcherComponent } from './pages/cv/components/theme-switcher/theme-switcher.component';
 import { CvComponent } from './pages/cv/cv.component';
+import { GameBoardComponent } from './pages/snake/components/game-board/game-board.component';
+import { SnakeComponent } from './pages/snake/snake.component';
 import { AnalogWatchComponent } from './pages/watch/components/analog-watch/analog-watch.component';
 import { NumericComponent } from './pages/watch/components/digital-watch/components/numeric/numeric.component';
 import { SeparatorComponent } from './pages/watch/components/digital-watch/components/separator/separator.component';
@@ -51,6 +53,8 @@ import { WatchesComponent } from './pages/watch/watch.component';
     DisplayComponent,
     GeneralButtonComponent,
     EnumPipePipe,
+    SnakeComponent,
+    GameBoardComponent,
   ],
   imports: [BrowserModule, RouterModule, AppRoutingModule],
   providers: [],
