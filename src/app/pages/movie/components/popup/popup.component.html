@@ -1,0 +1,23 @@
+<p-dialog [(visible)]="dataService.popup" [draggable]="false" [modal]="true"
+          [resizable]="false" [style]="{ width: '50vw',  border: '3px solid  var(--text-color)',}" header="{{ movie.title }}">
+  <div class="popup-image"><img [alt]="movie.title" [src]="
+        movie.posterPath
+          ? 'http://image.tmdb.org/t/p/original' + movie.posterPath
+          : 'assets/images/no-poster.png'
+      "/>
+  </div>
+  <div class="popup-text">
+    <div class="film-info" id='${film.id}'>
+      <div class="release">Original title: <span class='info-span'>{{movie.originalTitle}}</span></div>
+      <div class="genre-popup">Genre: <span class='info-span'>{{genres}}</span></div>
+      <div class="release">Release date: <span
+        class='info-span'>{{movie.releaseDate ? movie.releaseDate.replaceAll("-", ".") : "No release date"}}</span>
+      </div>
+      <div class="rating-popup">Rating: <span
+        class='popup-rating-{{movie.voteAverage >= 8 ? "green" : movie.voteAverage > 5 ? "orange" : "red"}}'>
+       {{movie.voteAverage ? movie.voteAverage.toFixed(1) : "No votes"}}
+</span></div>
+    </div>
+    {{movie.overview}}</div>
+</p-dialog>
+

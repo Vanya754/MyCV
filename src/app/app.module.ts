@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { PaginatorModule } from 'primeng/paginator';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './pages/calculator/calculator.component';
@@ -20,6 +25,11 @@ import { ScrollUpComponent } from './pages/cv/components/scroll-up/scroll-up.com
 import { SkillsComponent } from './pages/cv/components/skills/skills.component';
 import { ThemeSwitcherComponent } from './pages/cv/components/theme-switcher/theme-switcher.component';
 import { CvComponent } from './pages/cv/cv.component';
+import { FilmComponent } from './pages/movie/components/film/film.component';
+import { MovieHeaderComponent } from './pages/movie/components/movie-header/movie-header.component';
+import { PaginatorComponent } from './pages/movie/components/paginator/paginator.component';
+import { PopupComponent } from './pages/movie/components/popup/popup.component';
+import { MovieComponent } from './pages/movie/movie.component';
 import { GameBoardComponent } from './pages/snake/components/game-board/game-board.component';
 import { SnakeComponent } from './pages/snake/snake.component';
 import { AnalogWatchComponent } from './pages/watch/components/analog-watch/analog-watch.component';
@@ -55,8 +65,22 @@ import { WatchesComponent } from './pages/watch/watch.component';
     EnumPipePipe,
     SnakeComponent,
     GameBoardComponent,
+    MovieComponent,
+    PopupComponent,
+    PaginatorComponent,
+    MovieHeaderComponent,
+    FilmComponent,
   ],
-  imports: [BrowserModule, RouterModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    RouterModule,
+    AppRoutingModule,
+    FormsModule,
+    PaginatorModule,
+    DialogModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

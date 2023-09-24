@@ -7,6 +7,21 @@
   justify-content: space-evenly;
   flex-direction: column;
 
+  .game-board {
+    border: 5px solid var(--title-color);
+    box-shadow: 0 0 12px var(--title-color);
+    width: 160vmin;
+    height: 70vmin;
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    background-image: url("/assets/images/Stamp_of_Ukraine_s1985.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .mobile-controls {
     display: none;
     flex: 1;

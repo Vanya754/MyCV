@@ -18,3 +18,11 @@
   justify-content: space-around;
   margin: 3px;
 }
+
+@media screen and (max-width: 900px) {
+  .calculator {
+    margin-top: 90px
+  }
+}
+
+

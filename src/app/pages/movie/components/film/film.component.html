@@ -1,0 +1,23 @@
+
+<div class="preview">
+  <div [id]="data.id" class="cover-inner">
+    <img
+      (click)="openPopup()"
+      [alt]="data.title"
+      [src]="
+        data.posterPath
+          ? 'http://image.tmdb.org/t/p/original' + data.posterPath
+          : 'assets/images/no-poster.png'
+      "
+    />
+  </div>
+  <div class="film-info" id="${this.#id}">
+    <div class="title">{{ data.title }}</div>
+    <div class="genre">{{genres}}</div>
+    <div class="rating"><span class='rating-{{data.voteAverage >= 8 ? "green" : data.voteAverage > 5 ? "orange" : "red"}}'>
+       {{data.voteAverage ? data.voteAverage.toFixed(1) : "No votes"}}
+      </span>
+  </div>
+</div>
+</div>
+
