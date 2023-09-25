@@ -1,11 +1,26 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DialogModule } from 'primeng/dialog';
+import { DividerModule } from 'primeng/divider';
+import { DropdownModule } from 'primeng/dropdown';
+import { FileUploadModule } from 'primeng/fileupload';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputTextModule } from 'primeng/inputtext';
 import { PaginatorModule } from 'primeng/paginator';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { RatingModule } from 'primeng/rating';
+import { RippleModule } from 'primeng/ripple';
+import { TableModule } from 'primeng/table';
+import { TagModule } from 'primeng/tag';
+import { ToastModule } from 'primeng/toast';
+import { ToolbarModule } from 'primeng/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './pages/calculator/calculator.component';
@@ -32,6 +47,11 @@ import { PopupComponent } from './pages/movie/components/popup/popup.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { GameBoardComponent } from './pages/snake/components/game-board/game-board.component';
 import { SnakeComponent } from './pages/snake/snake.component';
+import { HeaderTodoComponent } from './pages/todo-list/components/header/headerTodo.component';
+import { LoginComponent } from './pages/todo-list/pages/login/login.component';
+import { MainComponent } from './pages/todo-list/pages/main/main.component';
+import { AuthService } from './pages/todo-list/services/auth.service';
+import { TodoListComponent } from './pages/todo-list/todo-list.component';
 import { AnalogWatchComponent } from './pages/watch/components/analog-watch/analog-watch.component';
 import { NumericComponent } from './pages/watch/components/digital-watch/components/numeric/numeric.component';
 import { SeparatorComponent } from './pages/watch/components/digital-watch/components/separator/separator.component';
@@ -70,6 +90,10 @@ import { WatchesComponent } from './pages/watch/watch.component';
     PaginatorComponent,
     MovieHeaderComponent,
     FilmComponent,
+    TodoListComponent,
+    LoginComponent,
+    MainComponent,
+    HeaderTodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,8 +104,32 @@ import { WatchesComponent } from './pages/watch/watch.component';
     DialogModule,
     ButtonModule,
     BrowserAnimationsModule,
+    ToastModule,
+    TableModule,
+    TagModule,
+    ConfirmDialogModule,
+    HttpClientModule,
+    RouterOutlet,
+    AppRoutingModule,
+    FormsModule,
+    DividerModule,
+    ButtonModule,
+    ToastModule,
+    ToolbarModule,
+    FileUploadModule,
+    TableModule,
+    RatingModule,
+    TagModule,
+    DialogModule,
+    DropdownModule,
+    RadioButtonModule,
+    InputNumberModule,
+    ConfirmDialogModule,
+    RippleModule,
+    InputTextModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthService, HttpClient, MessageService, ConfirmationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
