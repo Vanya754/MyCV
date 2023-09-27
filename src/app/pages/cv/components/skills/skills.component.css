@@ -24,6 +24,11 @@
   margin: 0;
 }
 
-
+@media screen and (max-width: 460px) {
+  .skills__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 

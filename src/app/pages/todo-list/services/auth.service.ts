@@ -13,7 +13,7 @@ export class AuthService {
   constructor(
     private readonly http: HttpClient,
     private readonly apiService: ApiService,
-    private readonly router: Router,
+    private router: Router,
   ) {}
 
   isAuthenticated(): boolean {
@@ -22,20 +22,19 @@ export class AuthService {
 
   async login(email: string): Promise<boolean> {
     const user = (await lastValueFrom(this.apiService.getUserData(email)))[0];
-    console.log(user);
+
     if (user) {
       localStorage.setItem(
         AppConstants.localStorageUserKey,
         JSON.stringify(user),
       );
-      this.router.navigateByUrl('');
-
+      this.router.navigateByUrl('/todos');
       return true;
     }
     return false;
   }
 
-  logout() {
+  logout(): void {
     localStorage.clear();
   }
 }

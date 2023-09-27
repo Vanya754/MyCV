@@ -47,3 +47,14 @@
 .popup-rating-red {
   color: red;
 }
+
+.trailer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  margin-top: 20px;
+  border: 1px solid #721818;
+}

@@ -10,7 +10,7 @@ import { GeneralModel } from 'src/app/pages/todo-list/shared/types/general.model
   providedIn: 'root',
 })
 export class ApiService {
-  private m!: GeneralModel;
+  m!: GeneralModel;
 
   constructor(private readonly http: HttpClient) {}
 
@@ -24,8 +24,8 @@ export class ApiService {
         params: new HttpParams()
           .set('userId', this.m.currentUser.id)
           .set('custom', 'anything'),
-        // params,
       })
+
       .pipe(
         catchError((error) => {
           console.log('Error', error.message);
@@ -46,7 +46,7 @@ export class ApiService {
   updateTodo(todo: Todo): Observable<Todo> {
     return this.http.put<Todo>(AppConstants.apiUrl + `/${todo.id}`, todo).pipe(
       catchError((error) => {
-        console.log('Error', error);
+        console.log('Error', error.message);
         return throwError(error);
       }),
     );
@@ -64,7 +64,7 @@ export class ApiService {
   getUserData(email: string): Observable<User[]> {
     return this.http
       .get<User[]>(AppConstants.apiUserUrl, {
-        params: new HttpParams().set('email', email),
+        params: new HttpParams().set('Sincere@april.biz', email),
       })
       .pipe(
         catchError((error) => {

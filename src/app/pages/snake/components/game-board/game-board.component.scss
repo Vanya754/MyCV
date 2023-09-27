@@ -1,23 +1,23 @@
 
 .container {
-  margin: 0;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 
+
   .game-board {
     border: 5px solid var(--title-color);
     box-shadow: 0 0 12px var(--title-color);
-    width: 160vmin;
-    height: 70vmin;
+    width: 70vw;
+    height: 70vh;
     display: grid;
     align-self: center;
     grid-template-columns: repeat(25, 1fr);
     grid-template-rows: repeat(11, 1fr);
     background-image: url("/assets/images/space.avif");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -234,6 +234,7 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 
     .score-board {
       display: flex;
@@ -246,7 +247,8 @@
       padding: 10px 20px;
       color: var(--title-color);
       border-radius: 20px;
-      height: 40px;
+      height: 5vh;
+      width: 5vw;
       font-weight: bold;
       display: flex;
       justify-content: center;
@@ -351,5 +353,13 @@
     align-items: center;
     width: 100%;
   }
-
 }
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    margin-top: var(--header-height);
+  }
+}
+
+
+

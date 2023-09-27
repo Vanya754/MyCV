@@ -4,26 +4,35 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class FiltersService {
-  private _title = '';
-  private _year = '';
-  private _page = 1;
-  private _apiKey = '5874acfd11651a28c55771624f7021f4';
-  private _language = 'en-US';
+  private _title: string = '';
+  private _year: string = '';
+  private _page: number = 1;
+  private _apiKey: string = '5874acfd11651a28c55771624f7021f4';
+  private _language: string = 'en-US';
+  private _popupId: number = 0;
 
-  set title(value: string) {
-    this._title = value;
+  get popupId(): number {
+    return this._popupId;
+  }
+
+  set popupId(value: number) {
+    this._popupId = value;
   }
 
   get title(): string {
     return this._title;
   }
 
-  set year(value: string) {
-    this._year = value;
+  set title(value: string) {
+    this._title = value;
   }
 
   get year(): string {
     return this._year;
+  }
+
+  set year(value: string) {
+    this._year = value;
   }
 
   get page(): number {

@@ -41,4 +41,12 @@ export class ResponseProcessService {
       return res;
     }, {});
   }
+
+  async responseTrailer(): Promise<string> {
+    const data = await this.apiService.loadTrailer();
+    return (
+      'https://www.youtube.com/embed/' +
+      data.results[data.results.length - 1].key
+    );
+  }
 }

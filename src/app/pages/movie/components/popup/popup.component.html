@@ -1,5 +1,6 @@
 <p-dialog [(visible)]="dataService.popup" [draggable]="false" [modal]="true"
-          [resizable]="false" [style]="{ width: '50vw',  border: '3px solid  var(--text-color)',}" header="{{ movie.title }}">
+          [resizable]="false" [style]="{ width: '50vw',  border: '3px solid  var(--text-color)',}"
+          header="{{ movie.title }}">
   <div class="popup-image"><img [alt]="movie.title" [src]="
         movie.posterPath
           ? 'http://image.tmdb.org/t/p/original' + movie.posterPath
@@ -19,5 +20,14 @@
 </span></div>
     </div>
     {{movie.overview}}</div>
+  <div class="trailer">
+    <iframe
+      [src]="trailerUrl"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      frameborder="0" height="315"
+      title="YouTube video player"
+      width="90%"></iframe>
+  </div>
 </p-dialog>
 

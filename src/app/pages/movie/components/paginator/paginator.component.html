@@ -1,8 +1,7 @@
-<p-paginator
-  (onPageChange)="onPageChange($event)"
-  *ngIf="dataService.totalPages > 1"
-  [first]="filtersService.page - 1"
-  [rows]="1"
-  [totalRecords]="dataService.totalPages"
+<p-paginator (onPageChange)="onPageChange($event)"
+             *ngIf="dataService.totalPages > 1"
+             [first]="filtersService.page - 1"
+             [rows]="1"
+             [totalRecords]="dataService.totalPages"
 ></p-paginator>
 

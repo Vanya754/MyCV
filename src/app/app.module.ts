@@ -47,8 +47,6 @@ import { PopupComponent } from './pages/movie/components/popup/popup.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { GameBoardComponent } from './pages/snake/components/game-board/game-board.component';
 import { SnakeComponent } from './pages/snake/snake.component';
-import { HeaderTodoComponent } from './pages/todo-list/components/header/headerTodo.component';
-import { LoginComponent } from './pages/todo-list/pages/login/login.component';
 import { MainComponent } from './pages/todo-list/pages/main/main.component';
 import { AuthService } from './pages/todo-list/services/auth.service';
 import { TodoListComponent } from './pages/todo-list/todo-list.component';
@@ -91,9 +89,7 @@ import { WatchesComponent } from './pages/watch/watch.component';
     MovieHeaderComponent,
     FilmComponent,
     TodoListComponent,
-    LoginComponent,
     MainComponent,
-    HeaderTodoComponent,
   ],
   imports: [
     BrowserModule,

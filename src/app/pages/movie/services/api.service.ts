@@ -9,6 +9,16 @@ export class ApiService {
 
   constructor(private filtersService: FiltersService) {}
 
+  private get _trailerUrl(): string {
+    return (
+      this._baseUrl +
+      'movie/' +
+      this.filtersService.popupId +
+      '/videos' +
+      this.filtersService.staticParams
+    );
+  }
+
   private get _genresUrl() {
     return (
       this._baseUrl + 'genre/movie/list' + this.filtersService.staticParams
@@ -18,6 +28,11 @@ export class ApiService {
   private get _moviesUrl() {
     const movie = this.filtersService.title ? `search/movie` : `discover/movie`;
     return this._baseUrl + movie + this.filtersService.toQuery;
+  }
+
+  async loadTrailer(): Promise<any> {
+    const response: Response = await fetch(this._trailerUrl);
+    return await response.json();
   }
 
   async loadData() {

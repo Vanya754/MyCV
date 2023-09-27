@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" id="todo">
   <p-toast></p-toast>
   <p-table
     #dt
@@ -8,7 +8,7 @@
     [rowHover]="true"
     [rows]="10"
     [showCurrentPageReport]="true"
-    [tableStyle]="{ width: '75vw' }"
+    [tableStyle]="{ width: '100%' }"
     [value]="todoService.m.todos"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     dataKey="id"
