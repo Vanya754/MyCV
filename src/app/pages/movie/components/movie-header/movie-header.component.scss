@@ -59,3 +59,11 @@ button.search:hover {
 button.search:active {
   filter: brightness(90%);
 }
+
+@media screen and (max-width: 767px) {
+  .head-info {
+    margin-top: 56px;
+  }
+}
+
+

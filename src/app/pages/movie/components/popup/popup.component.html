@@ -1,5 +1,5 @@
 <p-dialog [(visible)]="dataService.popup" [draggable]="false" [modal]="true"
-          [resizable]="false" [style]="{ width: '50vw',  border: '3px solid  var(--text-color)',}"
+          [resizable]="false" [style]="{ width: '100%','max-width':'1000px',  border: '3px solid  var(--text-color)',}"
           header="{{ movie.title }}">
   <div class="popup-image"><img [alt]="movie.title" [src]="
         movie.posterPath

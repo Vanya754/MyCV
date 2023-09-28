@@ -81,3 +81,36 @@
   background-color: white;
   padding: 5px;
 }
+
+@media (max-width: 800px) {
+  .rating {
+    width: 13%;
+    height: 8%;
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 3vw;
+  }
+
+  .genre {
+    font-size: 3vw;
+  }
+
+}
+
+@media (max-width: 655px) {
+  .rating {
+    width: 13%;
+    height: 8%;
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 4vw;
+  }
+
+  .genre {
+    font-size: 4vw;
+  }
+}
