@@ -271,6 +271,12 @@
   background-color: var(--body-color);;
 }
 
+@media screen and (max-width: 1023px) {
+  .p-paginator {
+    margin-bottom: 5.5rem;
+  }
+}
+
 .p-ripple.p-element.p-paginator-page.p-paginator-element.p-link {
   font-size: 20px;
   background-color: var(--text-color);

@@ -31,7 +31,7 @@
     left: 0;
     right: 0;
     background-color: var(--container-color);
-    box-shadow: 0 4px 24px hsla(40, 48%, 4%, .25);
+    box-shadow: 0 4px 24px var(--title-color);
     margin-inline: 1.5rem;
     border-radius: .5rem;
     padding: 1.25rem 3rem;
