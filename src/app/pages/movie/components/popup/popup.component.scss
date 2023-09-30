@@ -62,7 +62,7 @@ iframe {
 @media (max-width: 800px) {
 
   .popup-text {
-    width: 50%;
+    width: 100%;
     padding: 5px 5px;
     text-align: justify;
     font-size: 3vw;
@@ -91,29 +91,10 @@ iframe {
   }
 
   .popup-image {
-    width: 50%;
+    display: none
   }
 
-  .popup-image img {
-    margin: 0 auto;
-    width: 100%;
-    height: 30%
-  }
 
 }
 
-@media (max-width: 655px) {
-  .popup-content {
-    max-width: 100%;
-  }
 
-
-  .is-like img {
-    width: 50%;
-    height: 100%;
-  }
-
-  .is-dislike img {
-    width: 55%;
-  }
-}

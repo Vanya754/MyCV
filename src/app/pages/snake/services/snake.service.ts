@@ -28,7 +28,6 @@ export class SnakeService {
   }
 
   draw(gameBoard: any): void {
-    console.log(this.m.snakeBody);
     this.m.snakeBody.forEach((segment, i) => {
       const snakeElement = document.createElement('div');
       snakeElement.style.gridRowStart = segment.y.toString();
@@ -42,9 +41,9 @@ export class SnakeService {
         const prevPart = this.m.snakeBody[i - 1];
         let partTurn: number = 0;
         if (segment.x > prevPart.x) partTurn = 90;
-        if (segment.x < prevPart.x) partTurn = -90;
-        if (segment.y > prevPart.y) partTurn = -180;
-        if (segment.y < prevPart.y) partTurn = 0;
+        else if (segment.x < prevPart.x) partTurn = -90;
+        else if (segment.y > prevPart.y) partTurn = 180;
+        // if (segment.y < prevPart.y) partTurn = 0;
         snakeElement.style.transform = 'rotate(' + partTurn + 'deg)';
       }
       gameBoard.appendChild(snakeElement);
